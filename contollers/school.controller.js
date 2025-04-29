@@ -27,7 +27,7 @@ const listSchools = async (req, res) => {
   try {
     const schools = await schoolModel.getAllSchools();
     const toRad = (value) => (value * Math.PI) / 180;
-    const R = 6371; // Earth's radius in km
+    const R = 6371; 
 
     const schoolsWithDistance = schools.map((school) => {
       const dLat = toRad(school.latitude - userLat);
